@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Tab?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quartzy.MainController">
+   <tabs>
+      <Tab fx:id="tab1" text="Most money per minion NPC" />
+      <Tab fx:id="tab2" text="Most money per minion Bazaar" />
+      <Tab fx:id="tab3" text="Minion calculator" />
+   </tabs>
+</JFXTabPane>

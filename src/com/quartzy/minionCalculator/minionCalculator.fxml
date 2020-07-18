@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quartzy.minionCalculator.MinionCalculator">
+   <children>
+      <Text layoutX="378.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minion count:" wrappingWidth="137.3125">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="minionPlus" ellipsisString="+" layoutX="581.0" layoutY="106.0" prefHeight="25.0" prefWidth="23.0" text="+" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="minionMinus" ellipsisString="-" layoutX="515.0" layoutY="106.0" prefHeight="36.0" prefWidth="47.0" text="-" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="minionCountTxt" layoutX="564.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="coinsPerDay" layoutX="406.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coins per day:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text fx:id="coinsPerHour" layoutX="397.0" layoutY="679.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coins per hour:" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="446.0" layoutY="502.0" onAction="#calculate" text="Calculate">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="minionType" layoutX="472.0" layoutY="51.0" />
+      <Text fx:id="invalidMinion" fill="RED" layoutX="270.0" layoutY="851.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minion not selected/Invalid minion tier" textAlignment="CENTER">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <Text layoutX="351.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minion type:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <ScrollPane fx:id="scrollPane" layoutX="25.0" layoutY="161.0" prefHeight="260.0" prefWidth="961.0" />
+      <Text fx:id="coinsPerDay1" layoutX="369.0" layoutY="745.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coins per day bazaar:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text fx:id="coinsPerHour1" layoutX="359.0" layoutY="803.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coins per hour bazaar:" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

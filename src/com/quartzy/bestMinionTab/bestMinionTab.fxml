@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quartzy.bestMinionTab.BestMinionTab">
+   <children>
+      <TableView fx:id="table" prefHeight="860.0" prefWidth="1000.0">
+        <columns>
+          <TableColumn fx:id="coinsColumn" prefWidth="302.0" text="Coins/Hour" />
+          <TableColumn fx:id="coinsDayColumn" prefWidth="363.0" text="Coins/Day" />
+          <TableColumn fx:id="minionColumn" prefWidth="334.0" text="Minion" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
