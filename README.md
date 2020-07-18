@@ -1,0 +1,2 @@
+# **Hypixel Skyblock Utilities**
+This is a small program written in java and javaFX that displays the best minion to use, if you want to sell items to merchants or if you want to sell items to the bazaar. It also includes a minion calculator.
