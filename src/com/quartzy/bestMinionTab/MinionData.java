@@ -4,14 +4,16 @@ import org.jetbrains.annotations.NotNull;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 
 public class MinionData implements Comparable{
     private double coinsPerHour;
     private double coinsPerDay;
     private String name;
     
-    private String displayCPH;
-    private String displayCPD;
+    private double displayCPH;
+    private double displayCPD;
     
     public MinionData(double coinsPerHour, String name){
         this.coinsPerHour = coinsPerHour;
@@ -19,8 +21,9 @@ public class MinionData implements Comparable{
         this.name = name;
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
-        this.displayCPD = df.format(this.coinsPerDay);
-        this.displayCPH = df.format(this.coinsPerHour);
+        df.setDecimalFormatSymbols(DecimalFormatSymbols.getInstance(Locale.US));
+        this.displayCPD = Double.parseDouble(df.format(this.coinsPerDay));
+        this.displayCPH = Double.parseDouble(df.format(this.coinsPerHour));
     }
     
     public double getCoinsPerDay(){
@@ -47,19 +50,19 @@ public class MinionData implements Comparable{
         this.name = name;
     }
     
-    public String getDisplayCPH(){
+    public double getDisplayCPH(){
         return displayCPH;
     }
     
-    public void setDisplayCPH(String displayCPH){
+    public void setDisplayCPH(double displayCPH){
         this.displayCPH = displayCPH;
     }
     
-    public String getDisplayCPD(){
+    public double getDisplayCPD(){
         return displayCPD;
     }
     
-    public void setDisplayCPD(String displayCPD){
+    public void setDisplayCPD(double displayCPD){
         this.displayCPD = displayCPD;
     }
     

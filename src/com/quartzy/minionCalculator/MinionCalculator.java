@@ -20,10 +20,8 @@ import javafx.scene.text.Text;
 import java.math.RoundingMode;
 import java.net.URL;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.UUID;
+import java.text.DecimalFormatSymbols;
+import java.util.*;
 
 public class MinionCalculator implements Initializable{
     
@@ -189,8 +187,9 @@ public class MinionCalculator implements Initializable{
                 return;
             }
         }
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#,###.##");
         df.setRoundingMode(RoundingMode.CEILING);
+        df.setDecimalFormatSymbols(DecimalFormatSymbols.getInstance(Locale.US));
         coinsPerHour.setText("Coins per hour: " + df.format(totalCoinsPerHour));
         coinsPerDay.setText("Coins per day: " + df.format(totalCoinsPerDay));
         coinsPerDay1.setText("Coins per day bazaar: " + df.format(totalCoinsPerDay1));
